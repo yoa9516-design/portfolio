@@ -1,0 +1,711 @@
+/* 変数 */
+:root {
+  --site-width: 1440px;
+
+  --content-width: 1200px;
+
+  --color: #222;
+
+  --space-xl: 160px;
+
+  --space-l: 100px;
+
+  --space-m: 60px;
+
+  --space-s: 30px;
+}
+
+/*全体 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    Yu Gothic,
+    Arial,
+    sans-serif;
+
+  color: var(--color);
+
+  background: #fff;
+
+  line-height: 1.8;
+}
+
+.wrapper {
+  /* width: min(var(--site-width), 92%);
+
+  margin-inline: auto; */
+  width: min(1380px, 90%);
+
+  margin-inline: auto;
+}
+
+/* hero */
+.hero {
+  min-height: 100svh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding-top: 25px;
+
+  padding-bottom: 30px;
+
+  position: relative;
+}
+
+/* header */
+.hero-header {
+  max-width: 1200px;
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+}
+
+/* logo */
+.site-logo-wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-left: 20px;
+}
+
+.site-logo-wrap img {
+  width: 40px;
+  margin-top: -5px;
+}
+
+.site-logo {
+  float: right;
+}
+
+.site-logo p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  line-height: 0.2;
+}
+
+.site-logo h1 {
+  margin: 18px 0;
+
+  font-size: 1.4rem;
+
+  font-weight: 100;
+  line-height: 0.2;
+  letter-spacing: 0.05em;
+  font-family: Arial;
+}
+
+.site-logo span {
+  font-size: 11px;
+
+  letter-spacing: 0.38em;
+}
+/* ナビ*/
+nav {
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+
+  gap: 55px;
+}
+
+nav a {
+  font-size: 13px;
+  color: inherit;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+}
+/* タイトル */
+
+.hero-area {
+  height: 470px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin-left: 200px;
+}
+
+.hero-lead {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-left: 100px;
+}
+
+.hero-title h2 {
+  font-size: clamp(25px, 8vw, 40px);
+
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+  font-weight: 200;
+
+  letter-spacing: 0.14em;
+}
+
+.hero-lead-img img {
+  width: 24px;
+
+  height: auto;
+
+  display: block;
+}
+
+.hero-lead-p {
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  line-height: 2.2rem;
+  font-family:
+    "Helvetica Neue",
+    Yu Gothic,
+    sans-serif;
+}
+
+/* トップ下 */
+
+.hero-content {
+  width: 100%;
+
+  max-width: 1100px;
+
+  margin-left: 200px;
+}
+.hero-copy {
+  /* display: flex;
+
+  align-items: center;
+  gap: 60px;
+
+  width: 100%;
+
+  max-width: 720px; */
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  width: 100%;
+
+  max-width: 900px;
+}
+
+/* 下左 */
+.brand {
+  min-width: 180px;
+  margin-top: 20px;
+}
+
+.brand p {
+  font-size: 12px;
+  letter-spacing: 0.35em;
+}
+
+.brand h3 {
+  margin: 20px 0 10px 0;
+  line-height: 0.4;
+
+  font-size: 18px;
+
+  font-weight: 400;
+}
+
+.logo-kaiten img {
+  width: 410px;
+}
+
+/* 下右 */
+.lead {
+  max-width: 520px;
+}
+
+.lead p {
+  font-size: clamp(14px, 2vw, 17px);
+
+  line-height: 2.1;
+}
+/* スクロール */
+.scroll {
+  position: absolute;
+
+  left: 0px;
+
+  bottom: 0px;
+
+  writing-mode: vertical-rl;
+
+  font-size: 11px;
+
+  letter-spacing: 0.35em;
+}
+
+.scroll::after {
+  content: "";
+  display: block;
+  width: 1px;
+
+  height: 90px;
+
+  background: #bbb;
+
+  margin: 20px auto 0 auto;
+}
+
+/* フッター */
+
+footer {
+  position: relative;
+
+  margin: 0 auto;
+
+  background-color: #f7f7f7;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.page-top {
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  transform: translateX(-50%);
+}
+
+.page-top img {
+  width: 30px;
+  display: block;
+}
+footer nav {
+  display: flex;
+  justify-content: center;
+}
+.footer-copy {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 20px;
+}
+
+/* WORKSはじまり */
+.works {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 80;
+  letter-spacing: 0.08em;
+  margin-bottom: 50px;
+}
+
+.works-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* WORKSカード */
+.work-item {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: #222;
+}
+
+.work-item img {
+  width: 100%;
+  display: block;
+  transition: 0.5s;
+}
+
+/* WORKSうごき */
+.work-item:hover img {
+  transform: scale(1.04);
+}
+
+/* WORKSタイトル */
+.work-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px;
+  color: white;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.65));
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.work-item:hover .work-caption {
+  opacity: 1;
+}
+
+/* workアニメーション */
+/* .work-item {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.work-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.work-item:nth-child(1) {
+  transition-delay: 0s;
+}
+
+.work-item:nth-child(2) {
+  transition-delay: 0.15s;
+}
+
+.work-item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.work-item:nth-child(4) {
+  transition-delay: 0.45s;
+}
+
+.work-item:nth-child(5) {
+  transition-delay: 0.6s;
+}
+
+.work-item:nth-child(6) {
+  transition-delay: 0.75s;
+}
+
+.work-item {
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+} */
+
+.work-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* worksホバー時に画面を暗く */
+.work-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.work-item:hover::before {
+  opacity: 1;
+}
+
+/* works画面が少し浮かび上がる */
+
+.work-item {
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.work-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* キャプション */
+.work-caption {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.4s;
+}
+
+.work-item:hover .work-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* トップページの中のアバウトABOUT */
+/* ABOUT導入 */
+
+.about-intro {
+  padding: 50px 0;
+}
+
+.about-card {
+  width: min(560px, 90%);
+
+  margin: auto;
+
+  background: #f7f7f7;
+
+  padding: 90px 70px;
+
+  text-align: center;
+}
+
+.about-card h2 {
+  font-size: 1.6rem;
+
+  font-weight: 200;
+
+  letter-spacing: 0.12em;
+
+  margin-bottom: 45px;
+}
+
+.about-card .lead {
+  font-size: 1.1rem;
+
+  line-height: 2.2;
+
+  letter-spacing: 0.08em;
+
+  margin-bottom: 35px;
+}
+
+.about-card .text {
+  font-size: 1rem;
+
+  color: #666;
+
+  line-height: 2.2;
+
+  margin-bottom: 60px;
+}
+
+.about-link {
+  display: inline-block;
+
+  text-decoration: none;
+
+  color: #222;
+
+  font-size: 0.9rem;
+
+  letter-spacing: 0.25em;
+
+  transition: 0.35s;
+}
+
+.about-link:hover {
+  opacity: 0.6;
+
+  transform: translateY(-3px);
+}
+/* トップページの中のアバウトABOUTおわり */
+
+/* タブレット */
+@media (max-width: 900px) {
+}
+
+/* スマホ */
+@media (max-width: 480px) {
+  .hero-header {
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .hero-header nav {
+    width: 100%;
+
+    margin-top: 20px;
+  }
+
+  .hero-header nav ul {
+    justify-content: space-between;
+
+    padding: 0 20px;
+
+    gap: 0;
+  }
+
+  /* 上のロゴYOSHI SHOTENをスマホの時の表示 */
+
+  /* .site-logo-wrap {
+    width: 180px;
+  } */
+
+  .site-logo-wrap {
+    margin-left: -20px;
+  }
+  .site-logo-wrap img {
+    width: 30px;
+    margin-top: 0;
+    margin-left: 30px;
+  }
+
+  .hero-lead {
+    margin-left: 0;
+  }
+  .hero-lead-p {
+    font-size: 0.8rem;
+  }
+
+  .hero-area {
+    flex-direction: column;
+    margin-left: 0;
+    gap: 50px;
+    height: auto;
+  }
+
+  .hero-title {
+    height: 140px;
+    margin-top: 55px;
+  }
+
+  .hero-title h2 {
+    font-size: 38px;
+
+    text-align: center;
+  }
+
+  .logo-kaiten img {
+    width: 220px;
+  }
+
+  .hero-content {
+    width: 100%;
+
+    margin-left: 0;
+
+    max-width: none;
+  }
+
+  .hero-copy {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 35px;
+  }
+
+  .brand {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .logo-kaiten {
+    width: 100%;
+    text-align: center;
+    margin-top: -30px;
+  }
+
+  .logo-kaiten img {
+    width: 300px;
+  }
+  /* ABOUTのスマホ版 */
+  .about-intro {
+    padding: 90px 0;
+  }
+
+  .about-card {
+    width: 92%;
+
+    padding: 50px 25px;
+  }
+
+  .about-card h2 {
+    font-size: 1.4rem;
+
+    margin-bottom: 30px;
+  }
+
+  .about-card .lead {
+    font-size: 1rem;
+
+    line-height: 2;
+  }
+
+  .about-card .text {
+    font-size: 0.9rem;
+
+    margin-bottom: 40px;
+  }
+
+  .about-intro {
+    padding: 50px 0;
+  }
+
+  .about-title {
+    margin-bottom: 25px;
+  }
+
+  .about-card {
+    padding: 40px 25px;
+  }
+  /* ABOUTスマホ版おわり */
+
+  /* WORKSスマホ版 */
+  .works {
+    padding: 70px 0;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+
+    margin-bottom: 35px;
+  }
+
+  .works-grid {
+    width: 92%;
+
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+  /* WORKSキャプション追加 */
+  .work-caption {
+    opacity: 1;
+
+    transform: none;
+  }
+  .work-item::before {
+    opacity: 1;
+
+    background: rgba(0, 0, 0, 0.18);
+  }
+
+  /* ページトップのスクロールボタン */
+  .page-top img {
+    width: 22px;
+  }
+
+  /* ナビ部分のサイズ調整 */
+  .footer-nav {
+    width: 100%;
+  }
+
+  .footer-nav ul {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 10px;
+  }
+}

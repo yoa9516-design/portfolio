@@ -1,0 +1,228 @@
+.about-page {
+  width: min(900px, 90%);
+  margin: 0 auto;
+  padding: 0 0 70px 0;
+}
+
+.about-hero {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.about-hero .section-title {
+  margin-bottom: 50px;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 60px;
+
+  margin: 0 auto 60px auto;
+}
+
+.profile-image img {
+  width: 150px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.profile-text {
+  border-left: solid 1px;
+  padding-left: 40px;
+}
+.name {
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 0px;
+}
+
+.name-en {
+  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.job {
+  line-height: 2;
+  letter-spacing: 0.08em;
+  font-size: 0.9rem;
+}
+
+.about-message {
+  max-width: 650px;
+  line-height: 2.4;
+  color: #444;
+
+  margin: 0 auto 140px auto;
+}
+
+.about-message p {
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+}
+
+.section-block {
+  margin-bottom: 130px;
+}
+
+.section-block h3 {
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 50px;
+  text-align: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.skill-grid h4 {
+  margin-bottom: 20px;
+
+  letter-spacing: 0.12em;
+
+  font-size: 0.9rem;
+}
+
+.skill-grid ul {
+  list-style: none;
+
+  padding: 0;
+
+  line-height: 2;
+}
+
+.skills {
+  line-height: 2.4;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.license {
+  list-style: none;
+  padding: 0;
+  line-height: 2.4;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.philosophy {
+  text-align: center;
+}
+
+.philosophy p {
+  line-height: 2.4;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+/* スマホ版 */
+
+@media (max-width: 480px) {
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .profile-image img {
+    width: 100px;
+  }
+
+  .profile-text h3 {
+    font-size: 1.3rem;
+  }
+  .profile-text {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .name {
+    font-size: 1.1rem;
+  }
+
+  .name-en {
+    font-size: 0.6rem;
+    margin-bottom: 20px;
+  }
+
+  .job {
+    line-height: 1.8;
+    font-size: 0.9rem;
+  }
+
+  .about-message {
+    width: 90%;
+
+    margin: 0 auto 80px;
+  }
+
+  .about-message p {
+    font-size: 0.95rem;
+
+    line-height: 2.2;
+  }
+
+  .skill-grid {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+    text-align: center;
+  }
+
+  .skill-grid {
+    width: 100%;
+
+    max-width: 320px;
+
+    margin: 0 auto;
+
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+    text-align: center;
+  }
+
+  .section-block {
+    margin-bottom: 80px;
+  }
+  .about-hero {
+    margin-bottom: 60px;
+  }
+
+  .about-hero .section-title {
+    font-size: 2rem;
+  }
+  .skills {
+    font-size: 0.9rem;
+  }
+  .license {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  .philosophy {
+    font-size: 0.8rem;
+  }
+}
